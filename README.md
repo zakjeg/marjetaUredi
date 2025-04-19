@@ -1,4 +1,4 @@
-# # Namen razvoja
+## Namen razvoja
 Ta aplikacija bo narejena popolnoma brez uporabe chatgpt-ja ali kakršnega koli llm-ja!
 
 # Zakaj?
