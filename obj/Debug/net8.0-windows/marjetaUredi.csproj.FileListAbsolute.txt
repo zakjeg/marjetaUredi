@@ -18,3 +18,12 @@ C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\ref
 C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\marjetaUredi.pdb
 C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\marjetaUredi.genruntimeconfig.cache
 C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\ref\marjetaUredi.dll
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\marjetaUredi.sourcelink.json
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\Views\HomeView.g.cs
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\Views\UserInfoView.g.cs
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\Views\UserListView.g.cs
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\App.baml
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\Views\HomeView.baml
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\Views\UserInfoView.baml
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\Views\UserListView.baml

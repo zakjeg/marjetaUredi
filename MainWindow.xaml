@@ -58,6 +58,7 @@
                 <TextBlock Text="X" Foreground="White"/>
             </Button>
         </StackPanel>
+
         
 
         <!-- TRAK -->
@@ -69,9 +70,20 @@
             </Grid.ColumnDefinitions>
 
             <Rectangle Fill="CadetBlue" Grid.Column="0" Margin="0"/>
-            <Rectangle Fill="LightCyan" Grid.Column="1" Margin="0"/>    
+            <Rectangle Fill="LightCyan" Grid.Column="1" Margin="0"/>
+
+            <ContentControl Grid.Column="1" Content="{Binding SelectedViewModel}"/>
+
+
+            <StackPanel Margin="5" Grid.Row="1" Grid.Column="0" Orientation="Vertical">
+                <Button Name="btnHome" Content="Domov" Width="auto" Height="30" Margin="5" Command="{Binding UpdateViewCommand}" CommandParameter="Home"/>
+                <Button Name="btnUserList" Content="Seznam uporabnikov" Width="auto" Height="30" Margin="5" Command="{Binding UpdateViewCommand}" CommandParameter="UserList"/>
+                <Button Name="btnUnused" Content="Dejavnosti" Width="auto" Height="30" Margin="5" Click="btnUnused_Click_1"/>
+
+            </StackPanel>
 
         </Grid>
         <!-- TRAK KONEC -->
     </Grid>
 </Window>
+ 

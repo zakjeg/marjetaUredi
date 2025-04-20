@@ -18,8 +18,14 @@ namespace marjetaUredi
     {
         public MainWindow()
         {
+            Console.WriteLine("Unused button clicked"); //za testiranje
+            Console.WriteLine("Unused button clicked"); //za testiranje
+
             InitializeComponent();
+            
+            DataContext = new ViewModels.MainViewModel(); 
         }
+
 
 
         //Osnovne funkcije za opravljanje z oknom 
@@ -42,6 +48,19 @@ namespace marjetaUredi
         {
             Close(); //zapre okno
                      //Application.Current.Shutdown(); //zapre celotno aplicacijo
+        }
+
+        private void btnUnused_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnUnused_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Unable to save file, try again.");
+
+            Console.WriteLine("Unused button clicked"); //za testiranje
+
         }
     }
 }
