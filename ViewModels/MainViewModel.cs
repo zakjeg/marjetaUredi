@@ -11,24 +11,22 @@ namespace marjetaUredi.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private BaseViewModel _selectedVidwModel; 
-
+        private BaseViewModel _selectedViewModel = new HomeViewModel();
         public BaseViewModel SelectedViewModel
         {
-            get { return _selectedVidwModel; }
-            set 
-            { 
-                _selectedVidwModel = value;
+            get { return _selectedViewModel; }
+            set
+            {
+                _selectedViewModel = value;
                 OnPropertyChanged(nameof(SelectedViewModel));
             }
         }
 
+        public ICommand UpdateViewCommand { get; set; }
 
-        public ICommand updateViewCommand { get; set; } 
         public MainViewModel()
         {
-            updateViewCommand = new UpdateViewCommand(this);
+            UpdateViewCommand = new UpdateViewCommand(this);
         }
-
     }
 }

@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using marjetaUredi.ViewModels;
+
 
 namespace marjetaUredi
 {
@@ -18,12 +20,10 @@ namespace marjetaUredi
     {
         public MainWindow()
         {
-            Console.WriteLine("Unused button clicked"); //za testiranje
-            Console.WriteLine("Unused button clicked"); //za testiranje
 
             InitializeComponent();
             
-            DataContext = new ViewModels.MainViewModel(); 
+            DataContext = new MainViewModel(); 
         }
 
 
@@ -57,9 +57,7 @@ namespace marjetaUredi
 
         private void btnUnused_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Unable to save file, try again.");
-
-            Console.WriteLine("Unused button clicked"); //za testiranje
+            MessageBox.Show("Gumb še ni bindan");
 
         }
     }

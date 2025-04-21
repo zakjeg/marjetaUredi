@@ -29,7 +29,6 @@ namespace marjetaUredi.Commands
         public void Execute(object? parameter)
         {
             Console.WriteLine("Executing UpdateViewCommand with parameter!!");
-            MessageBox.Show("To kao laufa :shrug: ");
 
             if (parameter.ToString() == "Home")
             {
