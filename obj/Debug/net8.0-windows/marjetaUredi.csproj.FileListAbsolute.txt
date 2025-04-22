@@ -27,3 +27,7 @@ C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\App
 C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\Views\HomeView.baml
 C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\Views\UserInfoView.baml
 C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\Views\UserListView.baml
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\bin\Debug\net8.0-windows\Assets\Icons\chapel.png
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\marjetaUredi_Content.g.cs
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\Views\ActivitiesView.g.cs
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\Views\ActivitiesView.baml

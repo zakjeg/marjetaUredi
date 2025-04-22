@@ -11,7 +11,7 @@ namespace marjetaUredi.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private BaseViewModel _selectedViewModel = new HomeViewModel();
+        private BaseViewModel _selectedViewModel = new UserListViewModel();
         public BaseViewModel SelectedViewModel
         {
             get { return _selectedViewModel; }

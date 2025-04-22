@@ -13,8 +13,6 @@
     </WindowChrome.WindowChrome>
 
     <Grid>
-        
-
         <!-- - (število vrstic)
              -
              - -->
@@ -32,6 +30,13 @@
         <Rectangle Fill="DarkCyan" Grid.Row="2"  Margin="0"/>
         <Rectangle Fill="#555555" Grid.Row="0"  Margin="0"/>
 
+        <Button Width="auto" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" Command="{Binding UpdateViewCommand}" CommandParameter="Home" >
+            <StackPanel Orientation="Horizontal">
+                <Image Margin="10,1,1,1"  Source="Assets/Icons/chapel.png" Width="30" Height="28" VerticalAlignment="Center" Grid.Row="0" HorizontalAlignment="Left"/>
+                <TextBlock Margin="5,1,5,0" FontSize="20" FontFamily="Consolas" VerticalAlignment="Center" Foreground="White" Text="Marjeta Uredi" Grid.Row="0" HorizontalAlignment="Left"/>
+            </StackPanel>
+        </Button>
+        
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Name="btnMinimize" Content="_" Width="40" Height="30" BorderBrush="Transparent" Background="Transparent"  Foreground="White" Click="btnMinimize_Click"/>
             <Button Name="btnMaximize" Content="🗖" Width="40" Height="30" BorderBrush="Transparent" Background="Transparent" Click="btnMaximize_Click" Foreground="White"/>
@@ -78,7 +83,7 @@
             <StackPanel Margin="5" Grid.Row="1" Grid.Column="0" Orientation="Vertical">
                 <Button Name="btnHome" Content="Domov" Width="auto" Height="30" Margin="5" Command="{Binding UpdateViewCommand}" CommandParameter="Home"/>
                 <Button Name="btnUserList" Content="Seznam uporabnikov" Width="auto" Height="30" Margin="5" Command="{Binding UpdateViewCommand}" CommandParameter="UserList"/>
-                <Button Name="btnUnused" Content="Dejavnosti" Width="auto" Height="30" Margin="5" Click="btnUnused_Click_1"/>
+                <Button Name="btnUnused" Content="Dejavnosti" Width="auto" Height="30" Margin="5" Command="{Binding UpdateViewCommand}" CommandParameter="Activities"/>
 
             </StackPanel>
 

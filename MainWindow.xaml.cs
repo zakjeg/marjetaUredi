@@ -27,7 +27,6 @@ namespace marjetaUredi
         }
 
 
-
         //Osnovne funkcije za opravljanje z oknom 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e){ DragMove(); }
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
@@ -50,10 +49,6 @@ namespace marjetaUredi
                      //Application.Current.Shutdown(); //zapre celotno aplicacijo
         }
 
-        private void btnUnused_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void btnUnused_Click_1(object sender, RoutedEventArgs e)
         {

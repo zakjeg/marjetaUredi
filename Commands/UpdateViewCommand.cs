@@ -1,6 +1,7 @@
 ﻿using marjetaUredi.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,7 @@ namespace marjetaUredi.Commands
 
         public void Execute(object? parameter)
         {
-            Console.WriteLine("Executing UpdateViewCommand with parameter!!");
+            Debug.WriteLine("Executing UpdateViewCommand with parameter!!");
 
             if (parameter.ToString() == "Home")
             {
@@ -41,6 +42,10 @@ namespace marjetaUredi.Commands
             else if (parameter.ToString() == "UserInfo")
             {
                 viewModel.SelectedViewModel = new UserInfoViewModel();
+            }
+            else if (parameter.ToString() == "Activities")
+            {
+                viewModel.SelectedViewModel = new ActivitiesViewModel();
             }
             else
             {
