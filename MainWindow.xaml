@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:marjetaUredi"
         mc:Ignorable="d"
         Background="LightCyan" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown"
-        Title="MainWindow" Height="720" Width="1280">
+        Title="Marjeta Uredi" Height="720" Width="1280">
 
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:marjetaUredi.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Background="White">
+             d:DesignHeight="450" d:DesignWidth="800" Background="Transparent">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -14,10 +14,10 @@
         
             <TextBlock Text="Seznam uporabnikov" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="10"/>
 
-            <DataGrid  Grid.Row="1" Margin="20" Name="dtGrid" ItemsSource="{Binding}" />
+        <DataGrid HeadersVisibility="Column" BorderBrush="Black" Grid.Row="1" Margin="20" Name="dtGrid" ItemsSource="{Binding}"/>
 
 
-        
+
 
     </Grid>
 </UserControl>

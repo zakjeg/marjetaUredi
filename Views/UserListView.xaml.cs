@@ -30,14 +30,11 @@ namespace marjetaUredi.Views
             InitializeComponent();
 
             string connectionCredentials = (System.IO.Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName, "Assets") + System.IO.Path.DirectorySeparatorChar) + "databaseConnection.txt";
-            if (File.Exists(connectionCredentials))
-            {
-                Debug.WriteLine($"File found - {connectionCredentials}");
-            }
-            else
+            if (!File.Exists(connectionCredentials))
             {
                 Debug.WriteLine($"File not found - {connectionCredentials}");
             }
+
 
 
 
