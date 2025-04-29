@@ -36,10 +36,6 @@ namespace marjetaUredi.Views
             }
 
 
-
-
-
-
             string connectionString = File.ReadAllText(connectionCredentials);
 
             MySqlConnection connection = new MySqlConnection(connectionString);

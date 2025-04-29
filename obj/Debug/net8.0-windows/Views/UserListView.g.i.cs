@@ -61,7 +61,7 @@ namespace marjetaUredi.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/marjetaUredi;V1.0.0.0;component/views/userlistview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/marjetaUredi;component/views/userlistview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\UserListView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
