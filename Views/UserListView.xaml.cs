@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Diagnostics;
+using Newtonsoft.Json;
 
 namespace marjetaUredi.Views
 {
@@ -50,6 +51,32 @@ namespace marjetaUredi.Views
             connection.Close();
 
             dtGrid.DataContext = dataTable; 
+        }
+
+        public static string Dump(object obj)
+        {
+            return JsonConvert.SerializeObject(obj);
+        }
+
+        private void DumpSelectedUserData(object sender, RoutedEventArgs e)
+        {
+            DataRowView? row = dtGrid.SelectedItem as DataRowView;
+            if(row == null)
+            {
+                MessageBox.Show("No row selected");
+                return;
+            }
+            else
+            {
+                string message = "A";
+                for(int i=0; i<row.Row.ItemArray.Length; i++)
+                {
+                    message += (row.Row.ItemArray[i].ToString() + "; " );
+                }
+                MessageBox.Show(message);
+            }
+                
+            //MessageBox.Show(Dump(row));
         }
     }
 }

@@ -35,3 +35,4 @@ C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\bin\Debug\net8.0-windows\MyS
 C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\bin\Debug\net8.0-windows\MySql.Data.xml
 C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\marjetaUredi.csproj.AssemblyReference.cache
 C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\obj\Debug\net8.0-windows\marjetaU.3180ED4C.Up2Date
+C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
