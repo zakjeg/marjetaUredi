@@ -18,6 +18,7 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Diagnostics;
 using Newtonsoft.Json;
+using marjetaUredi.ViewModels;
 
 namespace marjetaUredi.Views
 {
@@ -30,53 +31,11 @@ namespace marjetaUredi.Views
         {
             InitializeComponent();
 
-            string connectionCredentials = (System.IO.Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName, "Assets") + System.IO.Path.DirectorySeparatorChar) + "databaseConnection.txt";
-            if (!File.Exists(connectionCredentials))
-            {
-                Debug.WriteLine($"File not found - {connectionCredentials}");
-            }
+            UserListViewModel userListViewModel = new UserListViewModel();
 
+            dtGrid.DataContext = userListViewModel.usersList; 
 
-            string connectionString = File.ReadAllText(connectionCredentials);
-
-            MySqlConnection connection = new MySqlConnection(connectionString);
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM users", connection);
-
-            connection.Open();
-
-            DataTable dataTable = new DataTable();
-            dataTable.Load(command.ExecuteReader());
-
-            connection.Close();
-
-            dtGrid.DataContext = dataTable; 
         }
 
-        public static string Dump(object obj)
-        {
-            return JsonConvert.SerializeObject(obj);
-        }
-
-        private void DumpSelectedUserData(object sender, RoutedEventArgs e)
-        {
-            DataRowView? row = dtGrid.SelectedItem as DataRowView;
-            if(row == null)
-            {
-                MessageBox.Show("No row selected");
-                return;
-            }
-            else
-            {
-                string message = "A";
-                for(int i=0; i<row.Row.ItemArray.Length; i++)
-                {
-                    message += (row.Row.ItemArray[i].ToString() + "; " );
-                }
-                MessageBox.Show(message);
-            }
-                
-            //MessageBox.Show(Dump(row));
-        }
     }
 }

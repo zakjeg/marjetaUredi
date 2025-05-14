@@ -16,7 +16,7 @@
         <TextBlock Text="Pregled dejavnosti" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10"/>
 
 
-        <DataGrid HeadersVisibility="Column" BorderBrush="Black" Grid.Row="1" Margin="10" Name="dtGrid" ItemsSource="{Binding}"/>
+        <DataGrid HeadersVisibility="Column" IsReadOnly="True" BorderBrush="Black" Grid.Row="1" Margin="10" Name="dtGrid" ItemsSource="{Binding}"/>
 
     </Grid>
 </UserControl>

@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
+using marjetaUredi.ViewModels;
 
 
 namespace marjetaUredi.Views
@@ -30,28 +31,13 @@ namespace marjetaUredi.Views
         {
             InitializeComponent();
 
+            ActivitiesViewModel activitiesViewModel = new ActivitiesViewModel();
 
-            string connectionCredentials = (System.IO.Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName, "Assets") + System.IO.Path.DirectorySeparatorChar) + "databaseConnection.txt";
-            if (!File.Exists(connectionCredentials))
-            {
-                Debug.WriteLine($"File not found - {connectionCredentials}");
-            }
+            dtGrid.DataContext = activitiesViewModel.WorkshopsList;
 
 
-            string connectionString = File.ReadAllText(connectionCredentials);
+            Debug.WriteLine("----------- Test če program pride do tu-------------");
 
-            MySqlConnection connection = new MySqlConnection(connectionString);
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM workshops", connection);
-
-            connection.Open();
-
-            DataTable dataTable = new DataTable();
-            dataTable.Load(command.ExecuteReader());
-
-            connection.Close();
-
-            dtGrid.DataContext = dataTable;
 
 
 

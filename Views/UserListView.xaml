@@ -14,9 +14,9 @@
         
             <TextBlock Text="Seznam uporabnikov" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="10"/>
 
-        <Button Content="Dump Selected user data" Click="DumpSelectedUserData"/>
+        <!--<Button Content="Dump Selected user data" Click="DumpSelectedUserData" Width="200" Height="30" HorizontalAlignment="Left"/>-->
 
-        <DataGrid HeadersVisibility="Column" BorderBrush="Black" Grid.Row="1" Margin="20" Name="dtGrid" ItemsSource="{Binding}"/>
+        <DataGrid HeadersVisibility="Column" IsReadOnly="True" BorderBrush="Black" Grid.Row="1" Margin="20" Name="dtGrid" ItemsSource="{Binding}"/>
 
 
 
