@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="marjetaUredi.Views.AddUserView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:marjetaUredi.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Vertical" Margin="5">
+                <TextBlock Margin="5" Text="Ime"/>
+                <TextBox VerticalAlignment="Center" Margin="5,5,5,8" Height="30" ></TextBox>
+                <TextBlock Margin="5" Text="Priimek"/>
+                <TextBox VerticalAlignment="Center" Margin="5,5,5,8" Height="30" ></TextBox>
+                <TextBlock Margin="5" Text="razred"/>
+                <TextBox VerticalAlignment="Center" Margin="5,5,5,8" Height="30" ></TextBox>
+                <TextBlock Margin="5" Text="starost"/>
+
+                <Button Margin="5" Content="Dodaj uprabnika" Width="200" Height="40" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Yellowtail"  FontSize="25"/>
+            </StackPanel>
+
+            
+            <!-- test site -->
+            <StackPanel Orientation="Vertical" Margin="5" Grid.Column="1">
+                <TextBlock Margin="10" Text="TEST INotifyPropertyChanged" HorizontalAlignment="Center" FontWeight="Bold"/>
+                <TextBox Name="InputTB"  Text="{Binding BoundText, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" Margin="5" Width="250" FontSize="18" HorizontalAlignment="Center" />
+                <TextBlock Name="ResultTB" Margin="5" Width="auto" Text="{Binding BoundText}"  Height="auto" FontSize="18"/>
+                
+                <Button Name="SetButton" FontFamily="Yellowtail" Click="SetButton_Click" Content="Set" HorizontalAlignment="Center" Width="100" FontSize="25" Margin="5"/>
+
+            </StackPanel>
+            
+
+
+        </Grid>
+        
+    </Grid>
+</UserControl>

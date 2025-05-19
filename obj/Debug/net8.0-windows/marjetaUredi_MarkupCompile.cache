@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\zak\source\repos\marjetaUredi\marjetaUredi\App.xaml
-5-1727728836
+62033300498
 11662137563
-21-1145293888
+23664659779
 200-1668276132
-MainWindow.xaml;Views\ActivitiesView.xaml;Views\HomeView.xaml;Views\UserInfoView.xaml;Views\UserListView.xaml;
+MainWindow.xaml;Views\ActivitiesView.xaml;Views\AddUserView.xaml;Views\HomeView.xaml;Views\UserInfoView.xaml;Views\UserListView.xaml;
 
 False
 

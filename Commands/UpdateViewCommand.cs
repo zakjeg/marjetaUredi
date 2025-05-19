@@ -47,6 +47,10 @@ namespace marjetaUredi.Commands
             {
                 viewModel.SelectedViewModel = new ActivitiesViewModel();
             }
+            else if (parameter.ToString() == "AddUser")
+            {
+                viewModel.SelectedViewModel = new AddUserViewModel();
+            }
             else
             {
                 viewModel.SelectedViewModel = new HomeViewModel();

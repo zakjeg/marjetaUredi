@@ -15,9 +15,7 @@ namespace marjetaUredi.ViewModels
 {
     public class UserListViewModel : BaseViewModel
     {
-
         public ObservableCollection<User> usersList;
-
         public UserListViewModel()
         {
 
@@ -25,9 +23,6 @@ namespace marjetaUredi.ViewModels
 
             usersList = usersRepository.getUsersList();
         }
-
-
-
 
     }
 }

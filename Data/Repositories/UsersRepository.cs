@@ -18,7 +18,6 @@ namespace marjetaUredi.Data.Repositories
     {
         private string _connectionCredentials;
         private string _tableName = "users";
-        //private ObservableCollection<User> _users = new ObservableCollection<User>();
         public UsersRepository()
         {
             _connectionCredentials = getConnectionString(); ;
@@ -72,7 +71,7 @@ namespace marjetaUredi.Data.Repositories
         //    command.Parameters.AddWithValue("@Age", user.Age);
         //    command.Parameters.AddWithValue("@FotoPermit", user.FotoPermit);
         //    command.Parameters.AddWithValue("@AddInfo", user.AddInfo);
-        //    command.Parameters.AddWithValue("@RfidUID", user.RfidUID);
+        //    command.Parameters.AddWithValue("@RfidUID", user.RfidUID);    
         //    connection.Open();
         //    command.ExecuteNonQuery();
         //    connection.Close();
