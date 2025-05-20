@@ -35,8 +35,8 @@
             <!-- test site -->
             <StackPanel Orientation="Vertical" Margin="5" Grid.Column="1">
                 <TextBlock Margin="10" Text="TEST INotifyPropertyChanged" HorizontalAlignment="Center" FontWeight="Bold"/>
-                <TextBox Name="InputTB"  Text="{Binding BoundText, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" Margin="5" Width="250" FontSize="18" HorizontalAlignment="Center" />
-                <TextBlock Name="ResultTB" Margin="5" Width="auto" Text="{Binding BoundText}"  Height="auto" FontSize="18"/>
+                <TextBox Name="InputTB"  Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}" Margin="5" Width="250" FontSize="18" HorizontalAlignment="Center" />
+                <TextBlock Name="ResultTB" Margin="5" Width="auto" Text="{Binding UserName}"  Height="auto" FontSize="18"/>
                 
                 <Button Name="SetButton" FontFamily="Yellowtail" Click="SetButton_Click" Content="Set" HorizontalAlignment="Center" Width="100" FontSize="25" Margin="5"/>
 

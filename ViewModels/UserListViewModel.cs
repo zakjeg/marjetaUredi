@@ -15,14 +15,26 @@ namespace marjetaUredi.ViewModels
 {
     public class UserListViewModel : BaseViewModel
     {
-        public ObservableCollection<User> usersList;
+        public ObservableCollection<User> usersList { get; set; }
         public UserListViewModel()
         {
-
             UsersRepository usersRepository = new UsersRepository();
-
             usersList = usersRepository.getUsersList();
         }
+ 
+
+        private User _SelectedItem;
+
+        public User SelectedItem
+        {
+            get { return _SelectedItem; }
+            set 
+            {
+                _SelectedItem = value;
+                OnPropertyChanged();
+            }
+        }
+
 
     }
 }

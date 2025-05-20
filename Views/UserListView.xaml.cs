@@ -31,9 +31,8 @@ namespace marjetaUredi.Views
         {
             InitializeComponent();
 
-            UserListViewModel userListViewModel = new UserListViewModel();
-
-            dtGrid.DataContext = userListViewModel.usersList; 
+            UserListViewModel vm = new UserListViewModel();
+            DataContext = vm;
 
         }
 

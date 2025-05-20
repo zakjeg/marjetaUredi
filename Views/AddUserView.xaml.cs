@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -21,36 +22,20 @@ namespace marjetaUredi.Views
     /// <summary>
     /// Interaction logic for AddUserView.xaml
     /// </summary>
-    public partial class AddUserView : UserControl, INotifyPropertyChanged
+    public partial class AddUserView : UserControl
     {
         public AddUserView()
         {
             InitializeComponent();
-            DataContext = this;
-        }
-        AddUserViewModel addUserListViewModel = new AddUserViewModel();
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        private string _UserName;
-        public string UserName
-        {
-            get { return _UserName; }
-            set
-            {
-                _UserName = value;
-                OnPropertyChanged();
-            }
+            AddUserViewModel vm = new AddUserViewModel();
+            DataContext = vm;
         }
 
         private void SetButton_Click(object sender, RoutedEventArgs e)
         {
             //Klic insert metode v UserRepozitoriju
+            Debug.WriteLine("Test");
         }
 
-        //Metoda za bolj preprost klic OnPropChang.(), (Ni treba vnašat ime spremenlivke)
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }
