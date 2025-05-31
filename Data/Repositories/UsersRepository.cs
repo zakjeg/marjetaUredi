@@ -38,6 +38,23 @@ namespace marjetaUredi.Data.Repositories
             return UserDataTableToCollection(users);
         }
 
+        //METHOD FOR TEST PURPOSES
+        public void addUser(string FirstName, string LastName, int UserClass, int Age)
+        {
+            MySqlConnection connection = new MySqlConnection(_connectionCredentials);
+            MySqlCommand command = new MySqlCommand($"INSERT INTO {_tableName} (FirstName, LastName, Class, Age, FotoPermit, AddInfo, RfidUID) VALUES (@FirstName, @LastName, @Class, @Age, @FotoPermit, @AddInfo, @RfidUID)", connection);
+            command.Parameters.AddWithValue("@FirstName", FirstName);
+            command.Parameters.AddWithValue("@LastName", LastName);
+            command.Parameters.AddWithValue("@Class", UserClass);
+            command.Parameters.AddWithValue("@Age", Age);
+            command.Parameters.AddWithValue("@FotoPermit", 1);
+            command.Parameters.AddWithValue("@AddInfo", "no add info");
+            command.Parameters.AddWithValue("@RfidUID", 0923467);
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
         private ObservableCollection<User> UserDataTableToCollection(DataTable users)
         {
             //pretvori DataTable v ObservableCollection in ga vrne

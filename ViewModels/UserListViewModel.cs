@@ -1,8 +1,10 @@
-﻿using marjetaUredi.Data.DataModels;
+﻿using marjetaUredi.Commands;
+using marjetaUredi.Data.DataModels;
 using marjetaUredi.Data.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.IO;
@@ -10,6 +12,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
+using marjetaUredi.Commands;
 
 namespace marjetaUredi.ViewModels
 {
@@ -20,6 +24,8 @@ namespace marjetaUredi.ViewModels
         {
             UsersRepository usersRepository = new UsersRepository();
             usersList = usersRepository.getUsersList();
+
+            AddUserCommand addUserCommand = new AddUserCommand();
         }
  
 
@@ -35,6 +41,10 @@ namespace marjetaUredi.ViewModels
             }
         }
 
+        public ICommand addUser { get; set; }
+        public ICommand removeUser { get; set; }
+
+        
 
     }
 }

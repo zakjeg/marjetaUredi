@@ -21,14 +21,18 @@
 
             <StackPanel Orientation="Vertical" Margin="5">
                 <TextBlock Margin="5" Text="Ime"/>
-                <TextBox VerticalAlignment="Center" Margin="5,5,5,8" Height="30" ></TextBox>
+                <TextBox VerticalAlignment="Center" Margin="5,5,5,8" Height="30" Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBlock Margin="5" Text="Priimek"/>
-                <TextBox VerticalAlignment="Center" Margin="5,5,5,8" Height="30" ></TextBox>
+                <TextBox VerticalAlignment="Center" Margin="5,5,5,8" Height="30" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}"  ></TextBox>
                 <TextBlock Margin="5" Text="razred"/>
-                <TextBox VerticalAlignment="Center" Margin="5,5,5,8" Height="30" ></TextBox>
+                
+                <TextBox VerticalAlignment="Center" Margin="5,5,5,8" Height="30" Text="{Binding UserClass, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
                 <TextBlock Margin="5" Text="starost"/>
+                
+                <TextBox VerticalAlignment="Center" Margin="5,5,5,8" Height="30" Text="{Binding UserAge, UpdateSourceTrigger=PropertyChanged}" ></TextBox>
 
-                <Button Margin="5" Content="Dodaj uprabnika" Width="200" Height="40" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Yellowtail"  FontSize="25"/>
+
+                <Button Margin="5" Content="Dodaj uprabnika" Width="auto" Height="40" HorizontalAlignment="Center" FontWeight="DemiBold"  FontSize="25" Command="{Binding AddCommand}"/>
             </StackPanel>
 
             
